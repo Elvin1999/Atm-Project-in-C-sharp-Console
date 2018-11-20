@@ -215,13 +215,16 @@ namespace ConsoleApp10
                         }
                         catch (Exception ex)
                         {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("========================================");
                             Console.WriteLine(ex.Message);
+                            Console.WriteLine("========================================");
                         }
                         Console.WriteLine("========================================");
                         Console.Write("Your count->>");
                         Console.WriteLine($"{controller.GetPersonBalans(pin)} $");
                         Console.WriteLine("========================================");
-                        current = DateTime.Now.AddMinutes(1.0);//it is conditional thing
+                        current = DateTime.Now;
                         controller.AddDateTime(current);
                     }
                     else if (select == 3)
@@ -293,13 +296,16 @@ namespace ConsoleApp10
                                 }
                                 catch (Exception ex)
                                 {
+                                    Console.ForegroundColor = ConsoleColor.Red;
+                                    Console.WriteLine("========================================");
                                     Console.WriteLine(ex.Message);
+                                    Console.WriteLine("========================================");
                                 }
                                 Console.WriteLine("========================================");
                                 Console.Write("Your count->>");
                                 Console.WriteLine($"{controller.GetPersonBalans(pin)} $");
                                 Console.WriteLine("========================================");
-                                current = DateTime.Now.AddMinutes(1.0);//it is conditional thing
+                                current = DateTime.Now;
                                 controller.AddDateTime(current);
                             }
                         } while (!controller.Access(pin));
